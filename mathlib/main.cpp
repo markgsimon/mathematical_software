@@ -1,13 +1,57 @@
 #include <iostream>
+#include <string> 
+#include <sstream>
+
 #include "mathlib.h"
 
-int main(){
+int main() {
 
-std::cout << "Math Library for all your computational needs!\n";
+   std::string line;
 
-double res = MathLib::add(5,3); // first function call of my library
+   std::cout << "========= My Math CAS CLI =======\n";
+   std::cout << "Type 'help' for commands, or 'exit' to quit;\n\n";
+   // std::cout << "Math Library for all your computational needs!\n";
 
-std::cout << "5 + 3 = " << res << "\n";
-return 0;
+   // Interactive shell while true loop
+   while(true) {
+  
+      std::cout << "> ";
+
+      std::getline(std::cin, line);
+
+      if (line == "exit" || line == "quit") break;
+   
+      if(line == "help" ){
+         std::cout << "Commands:\n"
+         << "add 5 3 \n"
+         << "subtract 7 3\n"
+         << "multiply 5 4\n"
+         << "divide 12 6\n" 
+         << "pow 2 3 \n"
+         << "help / exit\n\n";
+         
+         continue;
+      }
+      
+      std::istringstream iss(line);
+      std::string cmd;
+      iss >> cmd;
+
+      if (cmd == "add") {
+          double a, b;  iss >> a >> b;
+          std::cout << MathLib::add(a,b) << "\n";
+      } else if (cmd == "subtract") {
+          double a, b; iss >> a >> b;
+          std::cout << MathLib::subtract(a,b) << "\n";
+      } else if (cmd == "divide") {
+         double a,b; iss >> a >> b;
+         std::cout << MathLib::divide(a,b) << "\n";
+      } else { 
+         std::cout << "This command is not supported yet\n";
+      }
+
+   } 
+
+   return 0;
 
 }
