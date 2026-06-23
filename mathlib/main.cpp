@@ -46,6 +46,9 @@ int main() {
       } else if (cmd == "divide") {
          double a,b; iss >> a >> b;
          std::cout << MathLib::divide(a,b) << "\n";
+      } else if (cmd == "pow") {
+           double a,b; iss >> a >> b;
+           std::cout << MathLib::pow(a,b) << "\n";
       } else { 
          std::cout << "This command is not supported yet\n";
       }
