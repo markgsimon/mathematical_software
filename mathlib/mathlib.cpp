@@ -19,10 +19,6 @@ namespace MathLib {
    }
 
    double absolute_value(double x) {
-      if (x < 0.0) {
-        return -x;
-      } else {
-       return x;
-      }
+      return (x < 0.0) ? -x : x;  
    }
 }
