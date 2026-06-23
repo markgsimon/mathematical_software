@@ -12,6 +12,10 @@ double subtract(double a, double b);
 double divide(double a, double b);
 double multiply(double a, double b);
 
+// Some other elementary functions
+
+double absolute_value(double x);
+
 
 // Advanced functions
 

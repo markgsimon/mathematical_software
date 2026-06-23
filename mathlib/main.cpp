@@ -28,6 +28,7 @@ int main() {
          << "multiply 5 4\n"
          << "divide 12 6\n" 
          << "pow 2 3 \n"
+         << "abs -5\n"
          << "help / exit\n\n";
          
          continue;
@@ -49,6 +50,9 @@ int main() {
       } else if (cmd == "pow") {
            double a,b; iss >> a >> b;
            std::cout << MathLib::pow(a,b) << "\n";
+      } else if (cmd == "abs") {
+           double x; iss >> x; 
+           std::cout << MathLib::absolute_value(x) << "\n";
       } else { 
          std::cout << "This command is not supported yet\n";
       }
