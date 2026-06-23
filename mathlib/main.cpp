@@ -47,6 +47,9 @@ int main() {
       } else if (cmd == "divide") {
          double a,b; iss >> a >> b;
          std::cout << MathLib::divide(a,b) << "\n";
+      } else if (cmd == "multiply") {
+         double a,b; iss >> a >> b;
+         std::cout << MathLib::multiply(a,b) << "\n";
       } else if (cmd == "pow") {
            double a,b; iss >> a >> b;
            std::cout << MathLib::pow(a,b) << "\n";
