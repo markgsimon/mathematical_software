@@ -1,7 +1,7 @@
-#include "mathlib.h"
+#include "cas/math/mathlib.h"
 #include <stdexcept>
 
-namespace MathLib {
+namespace cas::math {
 
    // Easy functions first
    double add(double a, double b) { return a + b; }

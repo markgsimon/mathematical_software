@@ -4,7 +4,7 @@
 #include <cmath>
 
 
-namespace MathLib {
+namespace cas::math {
 
 // Basic Arithmetic
 double add(double a, double b);
