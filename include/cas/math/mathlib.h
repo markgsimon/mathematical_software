@@ -2,7 +2,7 @@
 #define MATHLIB_H
 
 #include <cmath>
-
+#include <string>
 
 namespace cas::math {
 
@@ -16,7 +16,6 @@ double multiply(double a, double b);
 
 double absolute_value(double x);
 
-
 // Advanced functions
 
 double pow(double base, double exp);
@@ -29,6 +28,11 @@ double pow(double base, double exp);
 //double cosine(double x);
 
 
+
+// Scientific Functions
+
+// Simple function to take cm or in and a value and convert length
+double length_converter(std::string a, std::string b, double initialValue);
 
 
 }

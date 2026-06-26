@@ -29,6 +29,7 @@ int main() {
          << "divide 12 6\n" 
          << "pow 2 3 \n"
          << "abs -5\n"
+         << "convert in cm 5\n"
          << "help / exit\n\n";
          
          continue;
@@ -56,6 +57,12 @@ int main() {
       } else if (cmd == "abs") {
            double x; iss >> x; 
            std::cout << cas::math::absolute_value(x) << "\n";
+      } else if(cmd =="convert") {
+          std::string a;
+          std::string b; 
+          double x; 
+          iss >> a >> b >> x;
+          std::cout << cas::math::length_converter(a,b,x) << "\n";
       } else { 
          std::cout << "This command is not supported yet\n";
       }
